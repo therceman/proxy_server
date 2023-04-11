@@ -18,6 +18,7 @@ app.use(
         target: TARGET_URL,
         changeOrigin: true,
         secure: false,
+        xfwd: true, // Enable forwarding of user IP
     })
 );
 
