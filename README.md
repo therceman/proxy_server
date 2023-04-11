@@ -7,14 +7,14 @@ A simple Node.js proxy server using Express nad http-proxy-middleware
 
 ## Configuration
 
-Create new .env file with the following content:
+Run `cp .env.example .env` or create a new .env file with the following content:
 
 ```dotenv
 EXTERNAL_PORT=3333
 TARGET_URL=https://example.com
 ```
 
-Replace `https://example.com` with your desired domain
+Open `.env` and replace `https://example.com` with your desired domain
 
 ## Usage
 
