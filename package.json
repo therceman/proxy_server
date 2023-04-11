@@ -4,7 +4,8 @@
   "description": "A simple Node.js proxy server using Express and http-proxy-middleware",
   "main": "proxy.js",
   "scripts": {
-    "start": "node proxy.js"
+    "start": "NODE_ENV=prod node proxy.js",
+    "dev": "NODE_ENV=dev nodemon index.js"
   },
   "keywords": [
     "proxy",
@@ -16,8 +17,11 @@
   "author": "therceman",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^2.0.1",
-    "dotenv": "^10.0.0"
+    "http-proxy-middleware": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

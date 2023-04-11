@@ -1,2 +1,5 @@
 run:
-	docker compose up --build
+	docker compose up -d --build && sleep 1 && docker logs proxy_server
+
+dev:
+	npm install && npm run dev

@@ -5,5 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        INTERNAL_PORT: ${INTERNAL_PORT}
     ports:
       - "${EXTERNAL_PORT:-3000}:${INTERNAL_PORT:-3000}"

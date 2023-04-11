@@ -3,8 +3,9 @@ const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
-const PORT = process.env.INTERNAL_PORT || 3000;
-const EXTERNAL_PORT = process.env.EXTERNAL_PORT || 3000;
+const ENV = process.env.NODE_ENV || 'prod';
+const INTERNAL_PORT = parseInt(process.env.INTERNAL_PORT) || 3000;
+const EXTERNAL_PORT = parseInt(process.env.EXTERNAL_PORT) || 3000;
 const TARGET_URL = process.env.TARGET_URL;
 
 if (!TARGET_URL) {
@@ -22,6 +23,6 @@ app.use(
     })
 );
 
-app.listen(PORT, () => {
-    console.log(`Proxy Server is running on external port ${EXTERNAL_PORT}`);
+app.listen(INTERNAL_PORT, () => {
+    console.log(`Proxy Server is running on external port ${(ENV === 'prod') ? EXTERNAL_PORT : INTERNAL_PORT}`);
 });
