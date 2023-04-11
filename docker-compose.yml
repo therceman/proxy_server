@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  proxy:
+    container_name: proxy_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${EXTERNAL_PORT:-3000}:${INTERNAL_PORT:-3000}"

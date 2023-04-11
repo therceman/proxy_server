@@ -1,0 +1,23 @@
+{
+  "name": "node-proxy",
+  "version": "1.0.0",
+  "description": "A simple Node.js proxy server using Express and http-proxy-middleware",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "keywords": [
+    "proxy",
+    "server",
+    "node",
+    "express",
+    "http-proxy-middleware"
+  ],
+  "author": "therceman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1",
+    "dotenv": "^10.0.0"
+  }
+}
