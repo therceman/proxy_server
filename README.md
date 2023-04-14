@@ -27,3 +27,11 @@ Open `.env` and replace `https://example.com` with your desired domain
 ## Usage
 
 Run `make run` or `docker compose up --build`
+
+## Examples
+
+1) Set custom request cookie named temp (e.g. Cookie: temp=qwe;). Original query param will be untouched
+```html
+https://proxy.com/?original=text&__request[header][Cookie][temp]=qwe
+```
+
