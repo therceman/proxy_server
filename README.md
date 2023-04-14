@@ -1,5 +1,5 @@
 # Proxy Server
-A simple Node.js proxy server using Express nad http-proxy-middleware
+A simple Node.js proxy server using Express and http-proxy-middleware
 
 ## Requirements
 
